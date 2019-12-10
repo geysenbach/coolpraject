@@ -10,12 +10,12 @@ def callpara():
     p = para()
 
     # parameters
-    p.n = 21  # number of rigid bodies
+    p.n = 21 # number of rigid bodies
     p.dim = 2 + p.n  # dimension of generalized coordinates
     p.g0 = 1.5  # leg length to body length ratio
     p.b0 = 1 / 12  # segment moment of inertia
     p.alpha0 = math.pi / 2  # Initial leg angle
-    p.tSpan = np.array([0, 30])  # Episode time span
+    p.tSpan = np.array([0, 120])  # Episode time span
 
     g_lbd = 1/1.6  # From Gray, Animal Locomotion p366, "Low gear"
     g_fb = 8.5/1.5  # From Gray, Animal Locomotion p366, "Low gear"
@@ -25,8 +25,8 @@ def callpara():
 
     # forces and torques
     p.k = 124.3985  # nondimensional stiffness
-    p.d = 20.7331  # nondimensional damping
-    p.T = -2.488  # nondimensional leg torque
+    p.d = 5 #20.7331  # nondimensional damping
+    p.T = -2.448  # nondimensional leg torque
 
     # compute constant matrices
     p = f.matrixinitializer(p)

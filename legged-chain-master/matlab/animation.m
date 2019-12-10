@@ -18,7 +18,7 @@ caseList
 rNVec = zeros(size(xStore,1),2*para.n); rCVec = zeros(size(xStore,1),2*para.n);
 tOld = 0; cInfo0 = [];
 for i = 1:size(xStore,1)-1
-    q = xStore(i,1:para.dim)';
+    q = xStore(i,1:para.dim)'; %%change 13 back to para.dim
     [cc,alpha,tEvent] = currentContacts(tStore(i),para);
     cInfo = contactInfo(cc,cInfo0,alpha,q,para);
     cInfo0 = cInfo;

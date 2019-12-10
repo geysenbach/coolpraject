@@ -35,7 +35,7 @@ def step(time, state, action, cInfo, p):
     #[tSteps, sol] = ode_ivp_integration(time, tEvent, state, action, cInfo, p)
 
     newState = np.transpose(sol[[-1], :])
-    rew = reward.val(time, state, action)
+    rew = reward.val(time, state, action, u)
     return [tEvent, newState, cInfo, rew, tSteps, sol]
 
 def ode_integration(time, tEvent, state, action, cInfo, p):
@@ -73,4 +73,3 @@ def euler_integration(time, tEvent, state, action, cInfo, p):
         sol[[k], :] = np.transpose(x + dx*p.dt)
         k += 1
     return [tSteps, sol]
-

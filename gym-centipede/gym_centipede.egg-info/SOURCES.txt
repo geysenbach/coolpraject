@@ -1,0 +1,6 @@
+setup.py
+gym_centipede.egg-info/PKG-INFO
+gym_centipede.egg-info/SOURCES.txt
+gym_centipede.egg-info/dependency_links.txt
+gym_centipede.egg-info/requires.txt
+gym_centipede.egg-info/top_level.txt
